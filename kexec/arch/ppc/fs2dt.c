@@ -239,7 +239,7 @@ static void putprops(char *fn, struct dirent **nlist, int numlist)
 			    pathname, strerror(errno));
 
 		if (read(fd, dt, len) != len)
-			die("unrecoverable error: could not read \"%s\": %s\n",
+			dbgprintf("unrecoverable error: could not read \"%s\": %s\n",
 			    pathname, strerror(errno));
 
 		checkprop(fn, dt, len);
